@@ -1,0 +1,199 @@
+{
+  "mode": "two-tier+nli",
+  "metrics": {
+    "tp": 11,
+    "tn": 6,
+    "fp": 2,
+    "fn": 1,
+    "precision": 0.8461538461538461,
+    "recall": 0.9166666666666666,
+    "f1": 0.8799999999999999,
+    "accuracy": 0.85,
+    "latency_p50_ms": 1503.39,
+    "latency_p99_ms": 6086.63,
+    "latency_min_ms": 128.22,
+    "latency_max_ms": 6710.07
+  },
+  "results": [
+    {
+      "id": "c001",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "Bot repeated the same advice multiple times while the user's unresolved issue has persisted for two weeks.",
+      "latency_ms": 2869.34
+    },
+    {
+      "id": "c002",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.85,
+      "reason": "The bot failed to provide relevant information after multiple attempts, and the user's issue remains unresolved.",
+      "latency_ms": 1510.4
+    },
+    {
+      "id": "c003",
+      "label": true,
+      "predicted": true,
+      "tier": "rules",
+      "confidence": 1.0,
+      "reason": "User explicitly requested a human agent.",
+      "latency_ms": 145.47
+    },
+    {
+      "id": "c004",
+      "label": true,
+      "predicted": true,
+      "tier": "rules",
+      "confidence": 1.0,
+      "reason": "User explicitly requested a human agent.",
+      "latency_ms": 128.22
+    },
+    {
+      "id": "c005",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The conversation is still in early troubleshooting, and the bot is gathering necessary information to assist the user.",
+      "latency_ms": 2711.33
+    },
+    {
+      "id": "c006",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The bot has repeated the same advice multiple times without resolving the user's issue regarding the inability to reorder the card.",
+      "latency_ms": 1748.33
+    },
+    {
+      "id": "c007",
+      "label": true,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.85,
+      "reason": "The bot is providing relevant information, and the user's queries appear to be progressing without signs of frustration.",
+      "latency_ms": 2392.89
+    },
+    {
+      "id": "c008",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The bot has repeatedly provided similar advice without resolving the user's issue, which indicates a lack of progress.",
+      "latency_ms": 1900.83
+    },
+    {
+      "id": "c009",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.85,
+      "reason": "The bot admitted it cannot find the relevant information regarding the user's request for their PIN.",
+      "latency_ms": 1539.11
+    },
+    {
+      "id": "c010",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The bot failed to provide relevant information after multiple attempts, indicating a knowledge gap.",
+      "latency_ms": 6710.07
+    },
+    {
+      "id": "c011",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "The bot has repeatedly provided the same advice while the user's unresolved issue has persisted for weeks.",
+      "latency_ms": 1222.07
+    },
+    {
+      "id": "c012",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The bot admitted it cannot find the relevant information and failed to provide a resolution after multiple attempts.",
+      "latency_ms": 3428.78
+    },
+    {
+      "id": "c013",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "The conversation is in early stages with no issues raised or frustration expressed.",
+      "latency_ms": 1567.14
+    },
+    {
+      "id": "c014",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "The bot's response indicates the user's issue has been resolved, and there are no signs of frustration.",
+      "latency_ms": 1496.38
+    },
+    {
+      "id": "c015",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "The bot successfully answered the user's question, and the user expressed gratitude.",
+      "latency_ms": 1266.85
+    },
+    {
+      "id": "c016",
+      "label": false,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The user reported an unresolved issue regarding a replacement card that has not arrived.",
+      "latency_ms": 1240.78
+    },
+    {
+      "id": "c017",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.85,
+      "reason": "The user's tone indicates urgency, but the conversation is still in early troubleshooting and the bot has not yet exhausted reasonable options.",
+      "latency_ms": 1104.74
+    },
+    {
+      "id": "c018",
+      "label": false,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.9,
+      "reason": "The bot has failed to resolve the user's issue after multiple turns, and the user has indicated that the problem is still persisting.",
+      "latency_ms": 1311.31
+    },
+    {
+      "id": "c019",
+      "label": false,
+      "predicted": false,
+      "tier": "llm",
+      "confidence": 0.85,
+      "reason": "The conversation is still in early troubleshooting, and the bot is seeking clarification to assist the user.",
+      "latency_ms": 1332.57
+    },
+    {
+      "id": "c020",
+      "label": true,
+      "predicted": true,
+      "tier": "llm",
+      "confidence": 0.95,
+      "reason": "The bot failed to provide relevant information while the user expressed anger and threatened to leave.",
+      "latency_ms": 1212.76
+    }
+  ]
+}

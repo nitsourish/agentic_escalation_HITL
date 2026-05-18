@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+*.zip
+.DS_Store
+.git/
+.gitignore
+deploy/
+data/
+*.ipynb
+*.json
+*.pdf

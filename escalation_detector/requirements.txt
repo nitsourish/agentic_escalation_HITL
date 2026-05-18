@@ -1,0 +1,8 @@
+google-genai>=0.8.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# NLI dependencies — used by default for explicit-request detection.
+# Without these the system warns and falls back to regex; pass --no-nli to suppress the warning.
+transformers>=4.30.0
+torch>=2.0.0
