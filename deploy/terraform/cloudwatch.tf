@@ -111,12 +111,15 @@ resource "aws_cloudwatch_dashboard" "main" {
         height = 6
         properties = {
           title  = "ALB Request Count & 5xx Errors"
+          region = local.region
           period = 60
           metrics = [
             ["AWS/ApplicationELB", "RequestCount", "LoadBalancer", aws_lb.main.arn_suffix],
             ["AWS/ApplicationELB", "HTTPCode_Target_5XX_Count", "LoadBalancer", aws_lb.main.arn_suffix]
           ]
-          view = "timeSeries"
+          view        = "timeSeries"
+          stacked     = false
+          annotations = { horizontal = [] }
         }
       },
       {
@@ -125,12 +128,15 @@ resource "aws_cloudwatch_dashboard" "main" {
         height = 6
         properties = {
           title  = "ALB P50 / P99 Latency (s)"
+          region = local.region
           period = 60
           metrics = [
             ["AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", aws_lb.main.arn_suffix, { stat = "p50", label = "p50" }],
             ["AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", aws_lb.main.arn_suffix, { stat = "p99", label = "p99" }]
           ]
-          view = "timeSeries"
+          view        = "timeSeries"
+          stacked     = false
+          annotations = { horizontal = [] }
         }
       },
       {
@@ -139,12 +145,15 @@ resource "aws_cloudwatch_dashboard" "main" {
         height = 6
         properties = {
           title  = "ECS CPU & Memory Utilisation (%)"
+          region = local.region
           period = 60
           metrics = [
             ["AWS/ECS", "CPUUtilization", "ClusterName", aws_ecs_cluster.main.name, "ServiceName", aws_ecs_service.app.name],
             ["AWS/ECS", "MemoryUtilization", "ClusterName", aws_ecs_cluster.main.name, "ServiceName", aws_ecs_service.app.name]
           ]
-          view = "timeSeries"
+          view        = "timeSeries"
+          stacked     = false
+          annotations = { horizontal = [] }
         }
       },
       {
@@ -153,11 +162,14 @@ resource "aws_cloudwatch_dashboard" "main" {
         height = 6
         properties = {
           title  = "ECS Running Task Count"
+          region = local.region
           period = 60
           metrics = [
             ["ECS/ContainerInsights", "RunningTaskCount", "ClusterName", aws_ecs_cluster.main.name, "ServiceName", aws_ecs_service.app.name]
           ]
-          view = "timeSeries"
+          view        = "timeSeries"
+          stacked     = false
+          annotations = { horizontal = [] }
         }
       }
     ]
