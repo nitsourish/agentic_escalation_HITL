@@ -23,8 +23,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
-# Bootstrap: make the escalation package importable from repo root or container.
-_REPO_ROOT = Path(__file__).resolve().parents[2] / "escalation_detector"
+# Bootstrap: make the escalation package importable.
+#
+# Two layouts need to work:
+#   Container : /app/app.py  +  /app/escalation_detector/   → parent / "escalation_detector"
+#   Local dev : deploy/api/app.py  +  escalation_detector/  → parents[1] / "escalation_detector"
+_here = Path(__file__).resolve().parent
+_REPO_ROOT = _here / "escalation_detector"                      # container path (checked first)
+if not _REPO_ROOT.exists() and len(_here.parents) >= 2:
+    _REPO_ROOT = _here.parents[1] / "escalation_detector"       # local dev path
+
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
