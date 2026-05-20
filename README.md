@@ -45,3 +45,4 @@ bash deploy/scripts/deploy.sh
 | `POST` | `/v1/escalation/check` | Evaluate conversation history |
 | `GET` | `/health` | ALB health check |
 | `GET` | `/v1/config` | Active runtime configuration |
+
