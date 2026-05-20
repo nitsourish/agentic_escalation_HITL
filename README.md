@@ -46,3 +46,4 @@ bash deploy/scripts/deploy.sh
 | `GET` | `/health` | ALB health check |
 | `GET` | `/v1/config` | Active runtime configuration |
 
+
