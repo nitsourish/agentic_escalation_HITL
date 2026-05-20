@@ -47,3 +47,4 @@ bash deploy/scripts/deploy.sh
 | `GET` | `/v1/config` | Active runtime configuration |
 
 
+
